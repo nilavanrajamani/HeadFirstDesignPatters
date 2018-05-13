@@ -10,7 +10,7 @@ namespace DecoratorPattern
     {
         private Bevarage _bevarage;
 
-        public Soy(Bevarage bevarage)
+        public Soy(Bevarage bevarage) : base(bevarage)
         {
             _bevarage = bevarage;
         }

@@ -10,7 +10,7 @@ namespace DecoratorPattern
     {
         private Bevarage _bevarage;
 
-        public Whip(Bevarage bevarage)
+        public Whip(Bevarage bevarage) : base(bevarage)
         {
             _bevarage = bevarage;
         }

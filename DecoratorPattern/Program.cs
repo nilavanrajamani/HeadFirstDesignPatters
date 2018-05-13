@@ -10,7 +10,7 @@ namespace DecoratorPattern
     {
         static void Main(string[] args)
         {
-            Bevarage bevarage = new Espresso();
+            Bevarage bevarage = new Espresso(COFEE_SIZE.GRANDE);
             //Console.WriteLine(bevarage.GetDescription() + " $" + bevarage.Cost());
 
             bevarage = new Mocha(bevarage);

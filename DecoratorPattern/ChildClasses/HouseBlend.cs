@@ -8,14 +8,24 @@ namespace DecoratorPattern
 {
     public class HouseBlend : Bevarage
     {
-        public HouseBlend()
+        private COFEE_SIZE _coffeeSize;
+        public HouseBlend(COFEE_SIZE coffeeSize) : base(coffeeSize)
         {
+            _coffeeSize = coffeeSize;
             description = "House Blend";
         }
 
         public override double Cost()
         {
-            return 0.89;
+            if (_coffeeSize == COFEE_SIZE.GRANDE)
+            {
+                return 3.09;
+            }
+            else if (_coffeeSize == COFEE_SIZE.TALL)
+            {
+                return 34.89;
+            }
+            return 1.49;
         }
     }
 }

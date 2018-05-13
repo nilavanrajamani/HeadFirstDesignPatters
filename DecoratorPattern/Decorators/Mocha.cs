@@ -10,7 +10,7 @@ namespace DecoratorPattern
     {
         private Bevarage _bevarage;
 
-        public Mocha(Bevarage bevarage)
+        public Mocha(Bevarage bevarage) : base(bevarage)
         {
             _bevarage = bevarage;
         }
@@ -22,7 +22,7 @@ namespace DecoratorPattern
 
         public override string GetDescription()
         {
-            if(_bevarage is CondimentDecorator)
+            if (_bevarage is CondimentDecorator)
             {
                 return (_bevarage as CondimentDecorator).GetDescription() + " , Mocha";
             }
